@@ -1,6 +1,6 @@
 # Day 1 to Day 14
 
-These projects were done in replit and can be found in the below links:
+These projects were done in replit and can be found in the below links:\n
 Day 1: https://replit.com/@JonatasViscaino/Day-1-Band-Name-Generator
 Day 2: https://replit.com/@JonatasViscaino/Day-2-Tip-Calculator
 Day 3: https://replit.com/@JonatasViscaino/Day-3-Treasure-Island
