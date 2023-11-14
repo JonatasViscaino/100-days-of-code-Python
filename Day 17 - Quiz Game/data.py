@@ -1,0 +1,40 @@
+question_data = [
+    {
+        "category": "Entertainment: Film",
+        "type": "boolean",
+        "difficulty": "easy",
+        "question": "Han Solo's co-pilot and best friend, Chewbacca is an Ewok.",
+        "correct_answer": "False",
+        "incorrect_answers": ["True"]
+    },
+    {"category": "Entertainment: Film", "type": "boolean", "difficulty": "easy",
+     "question": "The movie 'The Nightmare before Christmas' was all done with physical objects.",
+     "correct_answer": "True", "incorrect_answers": ["False"]},
+    {"category": "Entertainment: Film", "type": "boolean", "difficulty": "easy",
+     "question": "Leonardo DiCaprio won an Oscar for Best Actor in 2004's 'The Aviator'.",
+     "correct_answer": "False", "incorrect_answers": ["True"]},
+    {"category": "Entertainment: Film", "type": "boolean", "difficulty": "easy",
+     "question": "The film '2001: A Space Odyssey' was released on December 31st, 2000.",
+     "correct_answer": "False", "incorrect_answers": ["True"]},
+    {"category": "Entertainment: Film", "type": "boolean", "difficulty": "easy",
+     "question": "The 2010 film 'The Social Network' is a biographical drama film about MySpace founder Tom "
+                 "Anderson.",
+     "correct_answer": "False", "incorrect_answers": ["True"]},
+    {"category": "Entertainment: Film", "type": "boolean", "difficulty": "medium",
+     "question": "The color of the pills in the Matrix were Blue and Yellow.", "correct_answer": "False",
+     "incorrect_answers": ["True"]},
+    {"category": "Entertainment: Film", "type": "boolean", "difficulty": "easy",
+     "question": "In the original script of 'The Matrix', the machines used humans as additional computing "
+                 "power instead of batteries.",
+     "correct_answer": "True", "incorrect_answers": ["False"]},
+    {"category": "Entertainment: Film", "type": "boolean", "difficulty": "medium",
+     "question": "The Xenomorph from the science fiction film 'Alien' has acidic blood.",
+     "correct_answer": "True", "incorrect_answers": ["False"]},
+    {"category": "Entertainment: Film", "type": "boolean", "difficulty": "easy",
+     "question": "In Alfred Hitchcock's film 'Psycho' it is said he used chocolate syrup to simulate "
+                 "the blood in the famous shower scene from ",
+     "correct_answer": "True", "incorrect_answers": ["False"]},
+    {"category": "Entertainment: Film", "type": "boolean", "difficulty": "easy",
+     "question": "In the original Star Wars trilogy, David Prowse was the actor who physically portrayed Darth Vader.",
+     "correct_answer": "True", "incorrect_answers": ["False"]},
+    ]
