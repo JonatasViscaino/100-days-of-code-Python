@@ -27,6 +27,6 @@ Day 11: https://replit.com/@JonatasViscaino/Day-11-BlackJack
 
 Day 12: https://replit.com/@JonatasViscaino/Day-12-GuessTheNumber
 
-Day 13: This module was only to check debuggs in code but didn't had a final activity.
+Day 13: This module was only to check debuggs in code but didn't have a final activity.
 
 Day 14: https://replit.com/@JonatasViscaino/Day-14-Higher-lower-game
