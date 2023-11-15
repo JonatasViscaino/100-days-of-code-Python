@@ -1,4 +1,4 @@
-# Day 19 - The Turtles race
+# Day 19 - The Turtles Race
 
 This project was done in Python to show the basic use of a GUI (Graphical User Interface).  
 The Libraries that were used here is Turtle and Screen inside of turtle (TKinter) and random.  
