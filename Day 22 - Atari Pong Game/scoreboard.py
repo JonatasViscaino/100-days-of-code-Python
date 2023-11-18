@@ -19,6 +19,10 @@ class Scoreboard(Turtle):
         self.write(f"{self.left_score}", align="center", font=FONT)
         self.goto(100, 250)
         self.write(f"{self.right_score}", align="center", font=FONT)
+        self.goto(0,300)
+        self.pendown()
+        self.goto(0, -300)
+        self.penup()
 
     def right_point(self):
         self.right_score += 1

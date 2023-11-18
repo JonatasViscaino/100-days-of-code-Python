@@ -23,29 +23,50 @@ scoreboard = Scoreboard()
 
 # Controls of Paddles
 screen.listen()
-screen.onkeypress(right_paddle.go_up, "Up")
-screen.onkeypress(right_paddle.go_down, "Down")
-screen.onkeypress(left_paddle.go_up, "w")
-screen.onkeypress(left_paddle.go_down, "s")
+screen.onkeypress(right_paddle.turn_on_move_up, "Up")
+screen.onkeypress(right_paddle.turn_on_move_down, "Down")
+screen.onkeypress(left_paddle.turn_on_move_up, "w")
+screen.onkeypress(left_paddle.turn_on_move_down, "s")
+screen.onkeyrelease(right_paddle.stop, "Up")
+screen.onkeyrelease(right_paddle.stop, "Down")
+screen.onkeyrelease(left_paddle.stop, "w")
+screen.onkeyrelease(left_paddle.stop, "s")
 
+# Starting the game
 game_is_on = True
 while game_is_on:
-    time.sleep(0.1)
+    time.sleep(ball.move_speed)
     ball.move()
     screen.update()
+
+    # Improve Paddle Movements
+    if left_paddle.should_move_up:
+        left_paddle.go_up()
+
+    if right_paddle.should_move_up:
+        right_paddle.go_up()
+
+    if left_paddle.should_move_down:
+        left_paddle.go_down()
+
+    if right_paddle.should_move_down:
+        right_paddle.go_down()
 
     # Detect collision of the ball with the wall
     if abs(ball.ycor()) > 280:
         ball.bounce()
+
     # Detect collision of the ball with the Paddle
-    if (ball.distance(right_paddle) < 30 and ball.xcor() >= 320) or (ball.distance(left_paddle) < 30 and ball.xcor() <=
-                                                                     -320):
+    if ball.distance(right_paddle) < 40 and ball.xcor() > 320 and ball.new_x > 0:
+        ball.hit_paddle()
+    if ball.distance(left_paddle) < 40 and ball.xcor() < -320 and ball.new_x < 0:
         ball.hit_paddle()
 
+    # Detect if the paddle right misses the ball
     if ball.xcor() >= 400:
         scoreboard.left_point()
         ball.reset_position()
-
+    # Detect if the paddle left misses the ball
     if ball.xcor() <= -400:
         scoreboard.right_point()
         ball.reset_position()

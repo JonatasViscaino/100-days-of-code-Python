@@ -1,4 +1,5 @@
 from turtle import Turtle
+import random
 
 
 class Ball(Turtle):
@@ -8,8 +9,9 @@ class Ball(Turtle):
         self.shape("circle")
         self.color("white")
         self.penup()
-        self.new_x = 10
-        self.new_y = 10
+        self.move_speed = 0.1
+        self.new_x = random.choice([-10, 10])
+        self.new_y = random.choice([-10, 10])
 
     def move(self):
         new_x = self.xcor() + self.new_x
@@ -21,7 +23,9 @@ class Ball(Turtle):
 
     def hit_paddle(self):
         self.new_x *= -1
+        self.move_speed *= 0.95
 
     def reset_position(self):
         self.home()
-        self.hit_paddle()
+        self.move_speed = 0.1
+        self.new_x *= -1
