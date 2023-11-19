@@ -1,8 +1,8 @@
 # Day 23 - The Turtle Crossing Game
 
-This project was done in Python to show the use of a GUI (Graphical User Interface).  
-The Libraries that were used here is Turtle and Screen inside of turtle (TKinter), time and random.
-All the parts of the game was created using Object Oriented Program to make a cleaner code.
+This Python project demonstrates the implementation of a Graphical User Interface (GUI).  
+The utilized libraries include Turtle and Screen (from TKinter), along with time and random for additional functionalities.  
+The game components were designed using Object-Oriented Programming principles to ensure a cleaner and more organized code.
 
-The final result here is the following game where the user can control the turtle with the keys "Up" and "Down" to cross the turtle through the cars:
-![The Atari Game](https://github.com/JonatasViscaino/100-days-of-code-Python/assets/121301717/bcbd03d6-ffed-4b0a-867d-084da1ee865b)
+The end product is an interactive game where users can maneuver a turtle using the "Up" and "Down" keys, navigating through a field of moving cars:  
+![The Turtle Crossing Game](https://github.com/JonatasViscaino/100-days-of-code-Python/assets/121301717/69395d9d-7b5b-4fad-aa45-311d1ecc373a)
