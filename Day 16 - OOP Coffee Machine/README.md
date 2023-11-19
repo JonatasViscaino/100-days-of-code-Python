@@ -1,4 +1,4 @@
-# Day 15 - Object-Oriented Coffee Machine Simulator
+# Day 16 - Object-Oriented Coffee Machine Simulator
 
 This Python project is an object-oriented simulation of a coffee machine. The script encapsulates the coffee machine's functionality within classes, providing a modular and extensible design. Users can interact with the machine to order espresso, latte, or cappuccino while the program manages resources such as water, milk, coffee, and money.
 
