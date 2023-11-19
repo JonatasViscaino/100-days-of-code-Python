@@ -1,9 +1,14 @@
-# 100-days-of-code-Python
+# 100 Days of Code - Python Projects
 
-These projects are based on the course of App Brewery (https://appbrewery.com/) - 100 Days of Python Coding Bootcamp by Angela Yu.
+Welcome to my GitHub repository featuring projects inspired by the "100 Days of Python Coding Bootcamp" course by Angela Yu from  
+<a href="https://appbrewery.com/">App Brewery</a>.
 
-All projects can be found in their specific folders and if you have any questions, feel free to contact me.
+## About:  
+This repository contains a collection of Python projects completed during the "100 Days of Python" coding journey. Each project is organized into specific folders, making it easy to explore and understand the code. The course provided a structured and hands-on approach to learning Python, and these projects showcase the practical application of the concepts covered.
 
-Thank you.
+## Contact:  
+If you have any questions, feedback, or just want to connect, feel free to reach out to me. I'm here to help and discuss anything related to these projects.
 
-Jonatas Rodriguez
+Thank you for visiting!
+
+**Jonatas Rodriguez**
