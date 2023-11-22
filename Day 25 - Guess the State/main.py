@@ -20,16 +20,24 @@ turtle.shape(image)
 # Opening the dataframe
 df_state = pd.read_csv("50_states.csv")
 
-
 # Game Set-up
-game_is_on = True
 already_guessed = []
-while len(already_guessed) != 50:
+while len(already_guessed) < 50:
     stated_guessed = screen.textinput(title=f"{len(already_guessed)}/50 Guess the State",
                                       prompt="What's another state's name?").title()
-    if stated_guessed in df_state.state.values:
+    if stated_guessed in df_state.state.values and stated_guessed not in already_guessed:
         row = df_state[df_state.state == stated_guessed]
         write_state(stated_guessed, row.x.iloc[0], row.y.iloc[0])
         already_guessed.append(stated_guessed)
+
+    # Exit and create states to learn
+    if stated_guessed == "Exit":
+        states_to_learn = []
+        for state in df_state.state.values:
+            if state not in already_guessed:
+                states_to_learn.append(state)
+        df_states_to_learn = pd.DataFrame(states_to_learn)
+        df_states_to_learn.to_csv("states_to_learn.csv")
+        quit()
 
 screen.exitonclick()
