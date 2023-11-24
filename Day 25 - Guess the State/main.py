@@ -32,10 +32,7 @@ while len(already_guessed) < 50:
 
     # Exit and create states to learn
     if stated_guessed == "Exit":
-        states_to_learn = []
-        for state in df_state.state.values:
-            if state not in already_guessed:
-                states_to_learn.append(state)
+        states_to_learn = [state for state in df_state.state.values if state not in already_guessed]
         df_states_to_learn = pd.DataFrame(states_to_learn)
         df_states_to_learn.to_csv("states_to_learn.csv")
         quit()
