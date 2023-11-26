@@ -10,20 +10,21 @@ window.config(padx=20, pady=20)
 FONT = ("Arial", 12)
 miles_label = Label(text="Miles", font=FONT)
 miles_label.grid(row=0, column=2)
-Km_label = Label(text="Km", font=FONT)
-Km_label.grid(row=1, column=2)
+km_label = Label(text="Km", font=FONT)
+km_label.grid(row=1, column=2)
 equal_label = Label(text="is equal to", font=FONT)
 equal_label.grid(row=1, column=0)
-result_label = Label(text="", font=FONT)
-result_label.grid(row=1, column=1)
+km_result_label = Label(text="0", font=FONT)
+km_result_label.grid(row=1, column=1)
+
 
 # Button
-def calculate():
+def calculate_km():
     km_text = float(input_value.get())*1.60934
-    result_label.config(text=f"{km_text}")
+    km_result_label.config(text=f"{round(km_text,2)}")
 
 
-calculate_button = Button(text="Calculate", command=calculate)
+calculate_button = Button(text="Calculate", command=calculate_km)
 calculate_button.grid(row=2, column=1)
 
 # Entry
