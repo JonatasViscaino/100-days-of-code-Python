@@ -18,3 +18,4 @@ A simple Pomodoro timer implemented in Python using the Tkinter library. This ap
 
 Feel free to customize and integrate this Pomodoro timer into your daily workflow for improved time management and productivity.
 
+![GUI Pomodoro App](https://github.com/JonatasViscaino/100-days-of-code-Python/assets/121301717/e8ec17fa-aa8d-4482-b069-01ddc3f7bca6)
