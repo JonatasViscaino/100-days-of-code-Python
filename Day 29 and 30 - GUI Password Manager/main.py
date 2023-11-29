@@ -3,7 +3,7 @@ from tkinter import messagebox
 from random import choice, randint, shuffle
 import string
 import pyperclip
-
+import json
 
 # Constants
 INITIAL_EMAIL = "test@gmail.com"
@@ -11,21 +11,41 @@ INITIAL_EMAIL = "test@gmail.com"
 
 # Buttons functions
 def add_data():
-    website = website_entry.get()
+    website = website_entry.get().capitalize()
     email = email_entry.get()
     password = password_entry.get()
+    new_data = {
+        website: {
+            "email": email,
+            "password": password,
+        }
+    }
 
-    if website == "" or email == "" or password == "":
+    if len(website) == 0 or len(email) == 0 or len(password) == 0:
         messagebox.showwarning(message="Please don't leave any empty fields!")
     else:
         is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email}"
                                                               f"\nPassword: {password}\nIs it ok to save?")
         if is_ok:
-            with open("data.txt", "a") as file:
-                file.write(f"{website} | {email} | {password}\n")
-            website_entry.delete(0, END)
-            password_entry.delete(0, END)
-            website_entry.focus()
+            try:
+                with open("data.json", "r") as data_file:
+                    # Reading old data
+                    data = json.load(data_file)
+            except FileNotFoundError:
+                # if not found, create new data.json
+                with open("data.json", "w") as data_file:
+                    json.dump(new_data, data_file, indent=4)
+            else:
+                # Updating old data with new data
+                data.update(new_data)
+
+                with open("data.json", "w") as data_file:
+                    # Saving updated data
+                    json.dump(data, data_file, indent=4)
+            finally:
+                website_entry.delete(0, END)
+                password_entry.delete(0, END)
+                website_entry.focus()
 
 
 def generate_password():
@@ -39,6 +59,22 @@ def generate_password():
     password_entry.delete(0, END)
     password_entry.insert(0, final_password)
     pyperclip.copy(final_password)
+
+
+def search_data():
+    website = website_entry.get().capitalize()
+    try:
+        with open("data.json", "r") as data_file:
+            data = json.load(data_file)
+    except FileNotFoundError:
+        messagebox.showinfo(title="Error", message="No Data File Found.")
+    else:
+        if website in data:
+            email = data[website]["email"]
+            password = data[website]["password"]
+            messagebox.showinfo(title=website, message=f"Email: {email}\nPassword: {password}")
+        else:
+            messagebox.showinfo(title="Error", message=f"No details for {website} exists.")
 
 # Creating window object
 window = Tk()
@@ -60,8 +96,8 @@ password_txt = Label(text="Password:", background="white")
 password_txt.grid(row=3, column=0)
 
 # Creating Entries objects
-website_entry = Entry(width=37, highlightbackground="white")
-website_entry.grid(row=1, column=1, columnspan=2)
+website_entry = Entry(width=21, highlightbackground="white")
+website_entry.grid(row=1, column=1)
 website_entry.focus()
 email_entry = Entry(width=37, highlightbackground="white")
 email_entry.grid(row=2, column=1, columnspan=2)
@@ -70,6 +106,8 @@ password_entry = Entry(width=21, highlightbackground="white")
 password_entry.grid(row=3, column=1)
 
 # Creating Buttons objects
+search_button = Button(text="Search", width=11, highlightbackground="white", command=search_data)
+search_button.grid(row=1, column=2)
 generate_button = Button(text="Generate Password", width=11, highlightbackground="white", command=generate_password)
 generate_button.grid(row=3, column=2)
 add_button = Button(text="Add", width=35, highlightbackground="white", command=add_data)
