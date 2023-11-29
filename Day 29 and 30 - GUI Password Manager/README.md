@@ -19,4 +19,6 @@ This Python script implements a simple password manager with a graphical user in
 3. Optionally, generate a secure password.
 4. Save the data or search for existing details.
 
+![GUI Password Manager](https://github.com/JonatasViscaino/100-days-of-code-Python/assets/121301717/a94356b3-a31e-428a-b50f-f9e90ace8618)
+
 Feel free to customize and enhance this password manager to suit your needs!
