@@ -18,10 +18,10 @@ canvas.grid(row=0, column=0, columnspan=2)
 
 # Creating buttons object
 right_bt_img = PhotoImage(file="images/right.png")
-right_button = Button(image=right_bt_img, highlightthickness=0, highlightbackground=BACKGROUND_COLOR)
+right_button = Button(image=right_bt_img, highlightthickness=0, bd=0, height=95, width=95)
 right_button.grid(row=1, column=0)
 wrong_bt_img = PhotoImage(file="images/wrong.png")
-wrong_button = Button(image=wrong_bt_img, highlightthickness=0, highlightbackground=BACKGROUND_COLOR)
+wrong_button = Button(image=wrong_bt_img, highlightthickness=0, bd=0, height=95, width=95)
 wrong_button.grid(row=1, column=1)
 
 window.mainloop()
