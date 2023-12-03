@@ -19,4 +19,6 @@ The app saves progress, ensuring a personalized and efficient learning experienc
 2. Click the "Next" button to move to the next word.
 3. Track your progress with the saved data.
 
+![Flash card App](https://github.com/JonatasViscaino/100-days-of-code-Python/assets/121301717/af02e70f-e904-4007-802f-c45bdadcc610)
+
 Enjoy learning French words in a fun and interactive way with this FlashCard Language Learning App!
