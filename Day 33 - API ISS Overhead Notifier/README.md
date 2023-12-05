@@ -1,7 +1,7 @@
 # Day 33 - API ISS Overhead Notifier
 
-This Python script leverages two APIs to provide real-time information about the International Space Station (ISS) and the local sunrise/sunset times. If the ISS is currently overhead within a specified geographical location, and it is nighttime, the script sends an email notification. 
-This project demonstrates the use of APIs, HTTP requests, and basic automation for space enthusiasts and those interested in celestial observations.
+This Python script leverages two APIs to provide real-time information about the International Space Station (ISS) and the local sunrise/sunset times and demonstrates the use of HTTP requests, and basic automation for space enthusiasts and those interested in celestial observations.  
+If the ISS is currently overhead within a specified geographical location, and it is nighttime, the script sends an email notification.  
 
 ## Key Features:
 
