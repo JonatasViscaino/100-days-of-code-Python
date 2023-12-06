@@ -1,7 +1,8 @@
 # Day 34 - Quizzler - A Simple Quiz Application
 
 ## Overview:
-Quizzler is a basic quiz application built in Python, featuring a graphical user interface created using Tkinter. The application fetches a set of True/False questions from the Open Trivia Database API, and the user can answer them interactively.
+Quizzler is a basic quiz application built in Python, featuring a graphical user interface created using Tkinter.  
+The application fetches a set of True/False questions from the Open Trivia Database API, and the user can answer them interactively.
 
 ## Components:
 1. **Main Module (main.py):**
@@ -31,5 +32,7 @@ Quizzler is a basic quiz application built in Python, featuring a graphical user
 - Open Trivia Database API
 - Requests (for API communication)
 
+**App Preview:**  
+![Quizzler App](https://github.com/JonatasViscaino/100-days-of-code-Python/assets/121301717/aa7b410d-f755-435e-b6b6-c1fa64799521)
 
 Feel free to explore, modify, and use this code as a starting point for your own projects or learning endeavors.
