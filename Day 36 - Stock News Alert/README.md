@@ -1,7 +1,9 @@
 # Day 36 - Stock News Alert Project
 
 ## Overview
-This project is a simple yet effective Stock News Alert system that allows users to track and receive timely updates on the stock of their choice. The user can specify a stock symbol, and the system will send an email alert when the stock's variance exceeds 2% based on the latest available data. In addition to stock information, the email includes relevant news articles about the associated company.
+This project is a simple yet effective Stock News Alert system that allows users to track and receive timely updates on the stock of their choice.  
+The user can specify a stock symbol, and the system will send an email alert when the stock's variance exceeds 2% based on the latest available data.  
+In addition to stock information, the email includes relevant news articles about the associated company.
 
 ## How It Works
 The system utilizes two external APIs - Alpha Vantage for retrieving daily stock data and News API for fetching recent news related to the specified company. The user-configurable parameters such as stock symbol, company name, email credentials, and API keys are set as constants.
