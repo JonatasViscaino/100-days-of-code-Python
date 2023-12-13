@@ -5,7 +5,7 @@ It prompts users to input their exercise details, sends the information to Nutri
 
 ## Setup
 1. Obtain Nutritionix API credentials (APP_ID and API_KEY) and Google Sheets API credentials (Bearer ID).
-2. Set up a Google Sheet with Sheety API integration.
+2. Set up a Google Sheet with Sheety API integration. Copy the following link [Google Sheets Workout Log](https://docs.google.com/spreadsheets/d/1DHL6Y8XAHSC_KhJsa9QMekwP8b4YheWZY_sxlH3i494/edit) to use as a reference.
 3. Replace placeholders in the script with your API credentials, gender, weight, height, age, Google Sheet URL, and Bearer ID.
 
 ## Usage
