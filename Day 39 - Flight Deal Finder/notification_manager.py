@@ -1,8 +1,7 @@
 import smtplib
-from email.message import EmailMessage
 
-MY_EMAIL = "jonatasmviscaino@gmail.com"
-GMAIL_PASS = "kobkgwwxebfzgoqw"
+MY_EMAIL = "YOUR_EMAIL"
+GMAIL_PASS = "YOUR_GMAIL_KEY"
 
 
 class NotificationManager:

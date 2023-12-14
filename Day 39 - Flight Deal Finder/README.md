@@ -1,19 +1,27 @@
-# Day 38 - Workout tracking with Nutritionix and Sheety API
+# Day 39 - Flight Deal Alert System
 
-This Python script allows users to log their workout data from Nutritionix API to a Google Sheet using Sheety API.  
-It prompts users to input their exercise details, sends the information to Nutritionix to get exercise data, and then logs the exercise details along with date and time into a specified Google Sheet.
+This Python script monitors flight prices and sends email alerts for potential travel deals based on user-defined criteria. It utilizes a combination of data management, flight search, and notification modules to automate the process.
 
-## Setup
-1. Obtain Nutritionix API credentials (APP_ID and API_KEY) and Google Sheets API credentials (Bearer ID).
-2. Set up a Google Sheet with Sheety API integration. Copy the following link [Google Sheets Workout Log](https://docs.google.com/spreadsheets/d/1DHL6Y8XAHSC_KhJsa9QMekwP8b4YheWZY_sxlH3i494/edit) to use as a reference.
-3. Replace placeholders in the script with your API credentials, gender, weight, height, age, Google Sheet URL, and Bearer ID.
+## Components
+1. **DataManager:** Manages data stored in Google Sheets, including destination information and corresponding IATA codes. If an IATA code is missing, it uses the FlightSearch module to retrieve and update the data.
+2. **FlightSearch:** Interacts with Kiwi Partners Flight Search API to find available flights within a specified date range. It dynamically obtains IATA codes for destinations and checks for potential deals.
+3. **NotificationManager:** Handles the notification process, currently supporting email alerts. Sends alerts when a flight deal meeting user criteria is detected.
 
 ## Usage
-1. Run the script.
-2. Input the exercises you did when prompted.
-3. The script fetches exercise data from Nutritionix.
-4. Logs the exercise details, date, and time into the specified Google Sheet using Sheety API.
+- Set the **ORIGIN_CITY_IATA** variable to your desired origin airport's IATA code.
+- The script retrieves destination data from Google Sheets, updates missing IATA codes, and searches for flight deals within a specified timeframe (from tomorrow to six months ahead).
+- If a flight with a price lower than the recorded lowest price for a destination is found, an email alert is sent via the NotificationManager.
 
-Make sure to replace **"YOUR_ID"**, **"YOUR_KEY"**, **"YOUR_GENDER"**, **"YOUR_KG"**, **"YOUR_HEIGHT"**, **"YOUR_AGE"**, **"YOUR SHEET URL"** and **"YOUR_BEARER_ID"** with your actual credentials and details.
+## How to Use
+1. Populate the Google Sheets with destination cities and their corresponding IATA codes.
+2. Configure the origin airport's IATA code.
+3. Set up email credentials for the NotificationManager to enable email alerts.
+4. Run the script periodically to check for new flight deals.
 
-Feel free to customize the script according to your needs and enhance its functionality. Happy exercising!
+## Dependencies
+- **data_manager.py**: Manages data stored in Google Sheets.
+- **flight_search.py**: Interacts with flight search APIs to find flight details.
+- **notification_manager.py**: Handles notifications, currently supporting email alerts.
+- **datetime**: Manages date and time information.
+
+Feel free to customize this description according to additional details or specific functionalities in your code.
