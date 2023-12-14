@@ -13,8 +13,9 @@ This Python script monitors flight prices and sends email alerts for potential t
 - If a flight with a price lower than the recorded lowest price for a destination is found, an email alert is sent via the NotificationManager.
 
 ## How to Use
-1. Populate the Google Sheets with destination cities and their corresponding IATA codes.
-2. Configure the origin airport's IATA code.
+1. Populate the Google Sheets with destination cities and their corresponding IATA codes. You can use this link as reference [Google Sheets](https://docs.google.com/spreadsheets/d/1YMK-kYDYwuiGZoawQy7zyDjEIU9u8oggCV4H2M9j7os/edit?usp=sharing).
+
+2. Configure the origin airport's IATA code and API key of kiwi.
 3. Set up email credentials for the NotificationManager to enable email alerts.
 4. Run the script periodically to check for new flight deals.
 
