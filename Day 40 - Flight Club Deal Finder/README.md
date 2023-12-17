@@ -1,6 +1,8 @@
-# Day 39 - Flight Deal Alert System
+# Day 40 - Flight Club Deal Finder
 
 This Python script monitors flight prices and sends email alerts for potential travel deals based on user-defined criteria. It utilizes a combination of data management, flight search, and notification modules to automate the process.
+
+The difference from previous day it is that considers stopovers.
 
 ## Components
 1. **DataManager:** Manages data stored in Google Sheets, including destination information and corresponding IATA codes. If an IATA code is missing, it uses the FlightSearch module to retrieve and update the data.
