@@ -8,4 +8,7 @@ Feel free to explore and modify the code to understand how the box model influen
 ### Fonts:
 Additionally, the project utilizes the 'Libre Baskerville' font from Google Fonts to enhance the typography.
 
+![Motivational Quote](https://github.com/JonatasViscaino/100-days-of-code-Python/assets/121301717/f3479ac7-c9f3-4420-95bc-cafff7c7bef1)
+
+
 Feel free to customize the content, styles, and images to create your own motivational posters. Enjoy experimenting with the box model in CSS!
