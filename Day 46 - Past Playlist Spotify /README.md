@@ -1,6 +1,6 @@
 # Day 46 - Past Playlist Spotify
 
-This Python script automates the creation of a Spotify playlist based on Billboard Hot 100 songs for a specified year. Here's a quick overview:
+This Python script automates the creation of a Spotify playlist based on Billboard Hot 100 songs for a specified year.  
 
 ## Libraries Used:
 - **requests**: Fetches Billboard Hot 100 data via HTTP requests.
