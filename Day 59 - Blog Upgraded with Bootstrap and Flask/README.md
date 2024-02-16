@@ -2,6 +2,9 @@
 
 This project is a simple yet elegant blog developed using Flask, a web framework in Python, and styled with Bootstrap. The application fetches blog posts from a JSON API and displays them on the website. The primary components of the project include a Flask app (main.py) and HTML templates (e.g., index.html, about.html, contact.html, and post.html).
 
+![Blog Upgraded Website](https://github.com/JonatasViscaino/100-days-of-code-Python/assets/121301717/5399a946-01af-42c4-9248-6545c46637c7)
+
+
 ## Features
 - **Dynamic Content**: The blog dynamically fetches and displays posts from a JSON API.
 - **Responsive Design**: Bootstrap is used for styling, ensuring a responsive and visually appealing user interface.
